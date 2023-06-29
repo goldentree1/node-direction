@@ -46,7 +46,7 @@ export class Direction {
   * @example 
   * Direction.getAbsoluteDifference(new Direction('NW'), new Direction('NE')) // 90
   */
-    public static getAbsoluteDifference(dir1: Direction, dir2: Direction) {
+    static getAbsoluteDifference(dir1: Direction, dir2: Direction) {
         if (!dir1.degrees || !dir2.degrees) return null;
         const difference = Math.abs(dir1.degrees - dir2.degrees);
         if (difference > 180)
