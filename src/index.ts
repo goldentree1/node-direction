@@ -37,7 +37,24 @@ const directions = new Map([
  */
 export class Direction {
 
-    private _degrees:number|null;
+    /**
+  * The absolute difference between two directions in degrees.
+  * Order of directions in params therefore does not matter.
+  * @param dir1 
+  * @param dir2 
+  * @returns positive number between 0 and 180
+  * @example 
+  * Direction.getAbsoluteDifference(new Direction('NW'), new Direction('NE')) // 90
+  */
+    public static getAbsoluteDifference(dir1: Direction, dir2: Direction) {
+        if (!dir1.degrees || !dir2.degrees) return null;
+        const difference = Math.abs(dir1.degrees - dir2.degrees);
+        if (difference > 180)
+            return 360 - difference;
+        return difference;
+    }
+
+    private _degrees: number | null;
     private _opts;
 
     constructor(
