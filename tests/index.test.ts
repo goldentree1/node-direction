@@ -79,7 +79,15 @@ describe('Direction', () => {
                 const direction = new Direction(58, options);
                 expect(direction.symbol).toBe('E');
             });
-        })
+        });
+    });
+    //Tests for Direction.getAbsoluteDifference
+    describe("getAbsoluteDifference", () => {
+        it("should return the absolute difference between two directions", () => {
+            const dir1 = new Direction("NW");
+            const dir2 = new Direction("NE");
+            expect(Direction.getAbsoluteDifference(dir1, dir2)).toBe(90);
+        });
     });
 });
 
