@@ -1,7 +1,7 @@
 {
   "name": "@goldentree1/direction",
   "version": "1.0.0",
-  "description": "TypeScript library npm package boilerplate",
+  "description": "compass directions utility",
   "author": "EB",
   "homepage": "https://github.com/goldentree101/node-direction",
   "repository": {
